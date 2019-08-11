@@ -14,7 +14,6 @@ import com.example.android.mybakingrecipe.ui.MainActivity;
  * Implementation of App Widget functionality.
  */
 public class BakingWidgetProvider extends AppWidgetProvider {
-    static final String TAG = BakingWidgetProvider.class.getSimpleName();
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId, boolean isDatabaseEmpty, String recipeName, int ingredientsQuantity, int servingsQuantity) {
