@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="progressBarSize">42dp</dimen>
+    <dimen name="overall_padding">16dp</dimen>
+    <dimen name="step_text_size">25sp</dimen>
+
+    <!--
+Refer to App Widget Documentation for margin information
+http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">8dp</dimen>
+    <dimen name="toolbar_height">40dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="elevation_dimension">4dp</dimen>
+    <dimen name="main_image_height">58dp</dimen>
+    <dimen name="welcome_text_size">20sp</dimen>
+    <dimen name="side_margin">24dp</dimen>
+    <dimen name="master_list_fragment_width">300dp</dimen>
+    <dimen name="half_small_margin">4dp</dimen>
+    <dimen name="close_button_size">16dp</dimen>
+    <dimen name="dialog_text_size">20sp</dimen>
+    <dimen name="fab_button_size">20dp</dimen>
+    <dimen name="ingredients_margin_top">40dp</dimen>
+    <dimen name="ingredients_title_text_size">20sp</dimen>
+    <dimen name="hardcoded_quantity_width">60dp</dimen>
+    <dimen name="hardcoded_measure_width">60dp</dimen>
+    <dimen name="margin_bracket">24dp</dimen>
+    <dimen name="step_instruction_padding">5dp</dimen>
+    <dimen name="step_instruction_text_size">24sp</dimen>
+    <dimen name="button_container_height">40dp</dimen>
+    <dimen name="step_button_height">30dp</dimen>
+    <dimen name="ingredient_item_text_size">16sp</dimen>
+    <dimen name="ingredient_item_quantity_text_size">18sp</dimen>
+    <dimen name="ingredients_table_width">60dp</dimen>
+    <dimen name="ingredient_measure_text_size">15sp</dimen>
+    <dimen name="main_list_large_margin">56dp</dimen>
+    <dimen name="main_list_text_size">24sp</dimen>
+    <dimen name="recipe_list_text_size">20sp</dimen>
+    <dimen name="widget_margin_top">24dp</dimen>
+    <dimen name="widget_text_title_size">18sp</dimen>
+    <dimen name="widget_small_text_size">13sp</dimen>
+
+
+</resources>

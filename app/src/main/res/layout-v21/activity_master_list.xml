@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    This layout is a single-pane layout for the master/detail flow.
+    -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/master_list_container_single_pane"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryLightColor">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/elevation_dimension"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
+        app:titleTextColor="@color/primaryTextColor" />
+
+    <!-- The static RecipeMasterListFragment -->
+    <fragment
+        android:id="@+id/master_list_left_fragment_container"
+        android:name="com.example.android.mybakingrecipe.ui.RecipeMasterListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/my_toolbar"
+        android:layout_alignParentStart="true"
+        android:padding="@dimen/overall_padding">
+
+    </fragment>
+
+
+</RelativeLayout>

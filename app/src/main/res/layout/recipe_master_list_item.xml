@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/overall_padding"
+
+    >
+    <TextView
+        android:id="@+id/tv_item_recipe_master_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="@dimen/recipe_list_text_size"
+        android:textColor="@color/primaryTextColor"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/permanent_marker"
+        android:layout_toStartOf="@id/bracket_image"
+        android:paddingEnd="@dimen/small_margin"
+
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bracket_image"
+        android:src="@drawable/bracket_small"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="Bracket image" />
+
+
+</RelativeLayout>

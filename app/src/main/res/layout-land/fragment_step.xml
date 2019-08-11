@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ui.StepActivity"
+    android:background="@color/primaryLightColor"
+    android:id="@+id/fragment_step_details"
+    >
+
+    <RelativeLayout
+        android:id="@+id/video_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="@dimen/overall_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Empty view is only visible when the is no video available -->
+        <TextView
+            android:id="@+id/no_video_available"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/no_video_available"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+            android:textColor="@color/primaryTextColor"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+            android:id="@+id/video_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/small_margin" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_container_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/overall_padding" >
+
+        <Button
+            android:id="@+id/button_previous_step"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/step_button_height"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/secondaryColor"
+            android:paddingStart="@dimen/overall_padding"
+            android:paddingEnd="@dimen/overall_padding"
+            android:text="@string/previous_step"
+            android:textColor="@color/secondaryTextColor"
+            android:gravity="center"
+            android:fontFamily="@font/permanent_marker"/>
+
+        <Button
+            android:id="@+id/button_next_step"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/secondaryColor"
+            android:text="@string/next_step"
+            android:textColor="@color/secondaryTextColor"
+            android:paddingStart="@dimen/overall_padding"
+            android:paddingEnd="@dimen/overall_padding"
+            android:gravity="center"
+            android:fontFamily="@font/permanent_marker"/>
+
+        <ProgressBar
+            android:id="@+id/pb_loading_indicator"
+            android:layout_width="@dimen/progressBarSize"
+            android:layout_height="@dimen/progressBarSize"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

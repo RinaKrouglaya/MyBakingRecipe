@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_ingredients_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryLightColor">
+
+    <RelativeLayout
+        android:id="@+id/data_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.getbase.floatingactionbutton.AddFloatingActionButton
+            android:id="@+id/fab_add_to_widget"
+            android:layout_width="@dimen/fab_button_size"
+            android:layout_height="@dimen/fab_button_size"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/overall_padding"
+            fab:fab_colorNormal="@color/primaryLightColor"
+            fab:fab_colorPressed="@color/secondaryColor"
+            fab:fab_plusIconColor="@color/primaryTextColor" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/header_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ingredients_margin_top"
+            android:padding="@dimen/overall_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/servings_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/ingredients_title_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="The ingredients for 4 servings:" />
+
+            <TextView
+                android:id="@+id/hardcode_ingredient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                android:gravity="center_horizontal"
+                android:text="@string/hardcoded_ingredient"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/servings_text" />
+
+            <TextView
+                android:id="@+id/hardcode_quantity"
+                android:layout_width="@dimen/hardcoded_quantity_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/overall_padding"
+                android:layout_marginEnd="@dimen/overall_padding"
+                android:gravity="center_horizontal"
+                android:text="@string/hardcoded_quantity"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:layout_constraintEnd_toStartOf="@+id/hardcode_measure"
+                app:layout_constraintTop_toTopOf="@+id/hardcode_ingredient" />
+
+            <TextView
+                android:id="@+id/hardcode_measure"
+                android:layout_width="@dimen/hardcoded_measure_width"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/hardcoded_measure"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:layout_constraintBottom_toBottomOf="@+id/hardcode_quantity"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+
+        <ProgressBar
+            android:id="@+id/pb_loading_indicator"
+            android:layout_width="@dimen/progressBarSize"
+            android:layout_height="@dimen/progressBarSize"
+            android:layout_below="@id/header_container"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header_container"
+            android:fillViewport="true"
+            android:padding="@dimen/overall_padding">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+        </ScrollView>
+    </RelativeLayout>
+
+    <!-- Empty view is only visible when the RecyclerView has no items. -->
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:text="@string/error"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:visibility="invisible" />
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">My Baking Recipe </string>
+
+    <string name="no_internet">No Internet connection.</string>
+    <string name="no_connection">No Internet connection at the moment. Please try again later. </string>
+    <string name="no_video_available">No video is available</string>
+    <string name="not_available">Not available</string>
+    <string name="master_list_error">An error has occurred. Please try again later. </string>
+
+    <string name="error">Error: no recipes to show at the moment</string>
+
+    <string name="connecting">Connecting…</string>
+    <string name="ingredients_title">Ingredients</string>
+    <string name="previous_step">Previous step</string>
+    <string name="next_step">Next step</string>
+    <string name="no_more_steps">No more steps</string>
+
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="appwidget_text">Baking Recipe Of The Day</string>
+
+
+    <string name="checkbox_title">Add this list to the Home Screen Widget</string>
+    <string name="no_ingredients_error">Unfortunately, the ingredients list is not available at the moment. Please try again later.</string>
+    <string name="choose_ingredients">Please choose an ingredients list to show here</string>
+    <string name="welcome_text">Are you ready to bake? Here are some awesome recipes available today:</string>
+    <string name="add_ingredients_to_widget">Add this Ingredients List to the Home Screen Widget</string>
+    <string name="hardcoded_ingredient">Ingredient</string>
+    <string name="hardcoded_quantity">Quantity</string>
+    <string name="hardcoded_measure">Measure</string>
+
+
+</resources>

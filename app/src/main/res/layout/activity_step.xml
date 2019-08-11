@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <!--
+    This layout is a single-pane layout for Activity that shows Step details - StepActivity.
+    -->
+
+   <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/step_container_single_pane"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryLightColor">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
+        app:titleTextColor="@color/primaryTextColor" />
+
+        <!--  StepFragment -->
+        <FrameLayout
+            android:id="@+id/step_fragment_container"
+            android:name="com.example.android.mybaking.app.ui.StepFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/overall_padding"
+            android:layout_below="@id/my_toolbar"
+            android:layout_alignParentStart="true">
+        </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/primaryLightColor"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/overall_padding">
+
+
+        <LinearLayout
+            android:id="@+id/fragment_master_list_ingredients_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- TextView to show ingredients  -->
+            <TextView
+                android:id="@+id/ingredients_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/permanent_marker"
+                android:gravity="center_vertical"
+                android:text="@string/ingredients_title"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/ingredients_title_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_bracket"
+                android:gravity="center_vertical"
+                android:src="@drawable/bracket_small"
+                />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_recipe_master_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/fragment_master_list_ingredients_container"
+
+            />
+
+        <!-- Empty view is only visible when the RecyclerView has no items. -->
+        <TextView
+            android:id="@+id/empty_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/error"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:visibility="invisible" />
+
+        <!-- Empty view is only visible when the is an error -->
+        <TextView
+            android:id="@+id/no_connection_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/master_list_error"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <ProgressBar
+            android:id="@+id/pb_loading_indicator"
+            android:layout_width="@dimen/progressBarSize"
+            android:layout_height="@dimen/progressBarSize"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</RelativeLayout>

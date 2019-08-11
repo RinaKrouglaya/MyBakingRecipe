@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryLightColor">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/elevation_dimension"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
+        app:titleTextColor="@color/primaryTextColor"
+
+        />
+
+    <ImageView
+        android:id="@+id/main_image_tablet"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/main_image_height"
+        android:layout_below="@id/my_toolbar"
+        android:contentDescription="Decorating image of the main page"
+        android:padding="8dp"
+        android:src="@drawable/cake_pattern_tablet" />
+
+    <TextView
+        android:id="@+id/main_welcome_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_image_tablet"
+        android:fontFamily="@font/permanent_marker"
+        android:paddingStart="@dimen/side_margin"
+        android:paddingEnd="@dimen/side_margin"
+        android:text="@string/welcome_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="@dimen/welcome_text_size" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_welcome_text"
+        android:padding="@dimen/overall_padding">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_baking_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!-- Empty view is only visible when the RecyclerView has no items. -->
+            <TextView
+                android:id="@+id/empty_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/error"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:visibility="invisible" />
+
+            <!-- Empty view is only visible when the is no internet connection -->
+            <TextView
+                android:id="@+id/no_connection_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/no_connection"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+            <ProgressBar
+                android:id="@+id/pb_loading_indicator"
+                android:layout_width="@dimen/progressBarSize"
+                android:layout_height="@dimen/progressBarSize"
+                android:layout_gravity="center"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
